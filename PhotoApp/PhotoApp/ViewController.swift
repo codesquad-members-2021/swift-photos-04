@@ -14,6 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
+        self.collectionView.register(UINib(nibName: "PhotoCell", bundle: nil), forCellWithReuseIdentifier: "PhotoCell")
     }
 }
 
@@ -23,24 +24,13 @@ extension ViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath)
-        cell.backgroundColor = getRandomColor()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
         return cell
-    }
-    
-    func getRandomColor() -> UIColor {
-        var random: UIColor {
-            let r:CGFloat  = .random(in: 0...1)
-            let g:CGFloat  = .random(in: 0...1)
-            let b:CGFloat  = .random(in: 0...1)
-            return UIColor(red: r, green: g, blue: b, alpha: 1)
-        }
-        return random
     }
 }
 
 extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: 100)
+        return CGSize(width: 100.0, height: 100.0)
     }
 }
