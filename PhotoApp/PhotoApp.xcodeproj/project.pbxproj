@@ -17,6 +17,8 @@
 		88519E9F2608678500DFF3AE /* PhotoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88519E9E2608678500DFF3AE /* PhotoAppUITests.swift */; };
 		88519EB42608F0EF00DFF3AE /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88519EB22608F0EF00DFF3AE /* PhotoCell.swift */; };
 		88519EB52608F0EF00DFF3AE /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88519EB32608F0EF00DFF3AE /* PhotoCell.xib */; };
+		88519EBA26097FC600DFF3AE /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88519EB926097FC600DFF3AE /* CollectionViewDataSource.swift */; };
+		88519EBF2609827400DFF3AE /* PhotosCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88519EBE2609827400DFF3AE /* PhotosCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		88519EA02608678500DFF3AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88519EB22608F0EF00DFF3AE /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		88519EB32608F0EF00DFF3AE /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
+		88519EB926097FC600DFF3AE /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
+		88519EBE2609827400DFF3AE /* PhotosCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 				88519E7E2608678200DFF3AE /* SceneDelegate.swift */,
 				88519EB22608F0EF00DFF3AE /* PhotoCell.swift */,
 				88519EB32608F0EF00DFF3AE /* PhotoCell.xib */,
+				88519EBE2609827400DFF3AE /* PhotosCollectionView.swift */,
+				88519EB926097FC600DFF3AE /* CollectionViewDataSource.swift */,
 				88519E802608678200DFF3AE /* ViewController.swift */,
 				88519E822608678200DFF3AE /* Main.storyboard */,
 				88519E852608678500DFF3AE /* Assets.xcassets */,
@@ -265,8 +271,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88519EBA26097FC600DFF3AE /* CollectionViewDataSource.swift in Sources */,
 				88519EB42608F0EF00DFF3AE /* PhotoCell.swift in Sources */,
 				88519E812608678200DFF3AE /* ViewController.swift in Sources */,
+				88519EBF2609827400DFF3AE /* PhotosCollectionView.swift in Sources */,
 				88519E7D2608678200DFF3AE /* AppDelegate.swift in Sources */,
 				88519E7F2608678200DFF3AE /* SceneDelegate.swift in Sources */,
 			);
