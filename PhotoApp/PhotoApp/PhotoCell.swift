@@ -9,6 +9,7 @@ import UIKit
 
 class PhotoCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
+    var representedAssetIdentifier: String!
     
     override func awakeFromNib() {
         super.awakeFromNib()

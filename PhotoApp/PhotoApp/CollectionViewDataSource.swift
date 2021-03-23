@@ -6,16 +6,34 @@
 //
 
 import UIKit
+import Photos
 
-class CollectionViewDataSource: NSObject, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 40
-    }
+
+class CollectionViewDataSource: NSObject {
+    var allPhotos: PHFetchResult<PHAsset>!
+    let imageManager = PHCachingImageManager()
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
-        return cell
+    func fetchAllPhotos() {
+        let allPhotosOptions = PHFetchOptions()
+        allPhotosOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: true)]
+        allPhotos = PHAsset.fetchAssets(with: allPhotosOptions)
     }
+}
+
+extension CollectionViewDataSource:  UICollectionViewDataSource {
+        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+            fetchAllPhotos()
+            return allPhotos.count
+        }
+        
+        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
+            let asset = allPhotos.object(at: indexPath.row)
+            cell.representedAssetIdentifier = asset.localIdentifier
+            imageManager.requestImage(for: asset, targetSize: CGSize(width: 100, height: 100), contentMode: .aspectFill, options: nil, resultHandler: { image, _ in
+                        if cell.representedAssetIdentifier == asset.localIdentifier { cell.imageView.image = image } })
+            return cell
+        }
 }
 
 extension CollectionViewDataSource: UICollectionViewDelegateFlowLayout {
