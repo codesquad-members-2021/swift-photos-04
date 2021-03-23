@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Photos
 
 class PhotosCollectionView: UICollectionView {
     let collectionViewDataSource = CollectionViewDataSource()
@@ -16,6 +16,7 @@ class PhotosCollectionView: UICollectionView {
         self.dataSource = collectionViewDataSource
         self.delegate = collectionViewDataSource
         self.register(UINib(nibName: "PhotoCell", bundle: nil), forCellWithReuseIdentifier: "PhotoCell")
+        PHPhotoLibrary.shared().register(self)
     }
     
     required init?(coder: NSCoder) {
@@ -23,5 +24,39 @@ class PhotosCollectionView: UICollectionView {
         self.dataSource = collectionViewDataSource
         self.delegate = collectionViewDataSource
         self.register(UINib(nibName: "PhotoCell", bundle: nil), forCellWithReuseIdentifier: "PhotoCell")
+        PHPhotoLibrary.shared().register(self)
     }
 }
+
+extension PhotosCollectionView: PHPhotoLibraryChangeObserver {
+    func photoLibraryDidChange(_ changeInstance: PHChange) {
+        var assetCollection = self.collectionViewDataSource.allPhotos
+        
+        DispatchQueue.main.sync {
+                    guard let changes = changeInstance.changeDetails(for: assetCollection!) else { return }
+                    assetCollection = changes.fetchResultAfterChanges
+
+                    if changes.hasIncrementalChanges {
+                        self.performBatchUpdates({
+                            if let removed = changes.removedIndexes , removed.count > 0 {
+                                self.deleteItems(at: removed.map { IndexPath(item: $0, section:0) })
+                            }
+                            if let inserted = changes.insertedIndexes , inserted.count > 0 {
+                                self.insertItems(at: inserted.map { IndexPath(item: $0, section:0) })
+                            }
+                            if let changed = changes.changedIndexes , changed.count > 0 {
+                                self.reloadItems(at: changed.map { IndexPath(item: $0, section:0) })
+                            }
+                            changes.enumerateMoves { fromIndex, toIndex in
+                                self.moveItem(at: IndexPath(item: fromIndex, section: 0),
+                                                             to: IndexPath(item: toIndex, section: 0))
+                            }
+                        })
+                    } else {
+                        self.reloadData()
+                    }
+                }
+    }
+}
+    
+    

@@ -44,9 +44,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Photos" id="qfd-PX-D1Q"/>
-                    <connections>
-                        <outlet property="collectionView" destination="mbo-UH-Sbe" id="6eZ-Pq-DvA"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
