@@ -19,6 +19,7 @@
 		88519EB52608F0EF00DFF3AE /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88519EB32608F0EF00DFF3AE /* PhotoCell.xib */; };
 		88519EBA26097FC600DFF3AE /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88519EB926097FC600DFF3AE /* CollectionViewDataSource.swift */; };
 		88519EBF2609827400DFF3AE /* PhotosCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88519EBE2609827400DFF3AE /* PhotosCollectionView.swift */; };
+		88519EDB260B0EBE00DFF3AE /* doodle.json in Resources */ = {isa = PBXBuildFile; fileRef = 88519EDA260B0EBE00DFF3AE /* doodle.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		88519EB32608F0EF00DFF3AE /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
 		88519EB926097FC600DFF3AE /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
 		88519EBE2609827400DFF3AE /* PhotosCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionView.swift; sourceTree = "<group>"; };
+		88519EDA260B0EBE00DFF3AE /* doodle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = doodle.json; path = ../../../../../doodle.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				88519E802608678200DFF3AE /* ViewController.swift */,
 				88519E822608678200DFF3AE /* Main.storyboard */,
 				88519E852608678500DFF3AE /* Assets.xcassets */,
+				88519EDA260B0EBE00DFF3AE /* doodle.json */,
 				88519E872608678500DFF3AE /* LaunchScreen.storyboard */,
 				88519E8A2608678500DFF3AE /* Info.plist */,
 			);
@@ -247,6 +250,7 @@
 				88519E892608678500DFF3AE /* LaunchScreen.storyboard in Resources */,
 				88519E862608678500DFF3AE /* Assets.xcassets in Resources */,
 				88519E842608678200DFF3AE /* Main.storyboard in Resources */,
+				88519EDB260B0EBE00DFF3AE /* doodle.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
