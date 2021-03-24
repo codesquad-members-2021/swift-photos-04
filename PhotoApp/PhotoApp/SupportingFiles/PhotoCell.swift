@@ -10,6 +10,10 @@ import UIKit
 class PhotoCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     
+    override var canBecomeFirstResponder: Bool {
+        return true
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
