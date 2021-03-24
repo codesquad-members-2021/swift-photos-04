@@ -17,9 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mbo-UH-Sbe" customClass="PhotosCollectionView" customModule="PhotoApp" customModuleProvider="target">
-                                <rect key="frame" x="16" y="44" width="358" height="766"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mbo-UH-Sbe" customClass="PhotosCollectionView" customModule="PhotoApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="810"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="435-jR-xvd">
                                     <size key="itemSize" width="128" height="128"/>
@@ -42,6 +41,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mbo-UH-Sbe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3dq-cB-tBH"/>
+                            <constraint firstItem="mbo-UH-Sbe" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="buh-KC-z4D"/>
+                            <constraint firstItem="mbo-UH-Sbe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hmj-QL-Gst"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mbo-UH-Sbe" secondAttribute="trailing" id="zZQ-Pm-Zsk"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Photos" id="qfd-PX-D1Q"/>
                 </viewController>
