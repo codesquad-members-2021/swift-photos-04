@@ -32,7 +32,8 @@ extension PhotosCollectionView: PHPhotoLibraryChangeObserver {
     func photoLibraryDidChange(_ changeInstance: PHChange) {
         var assetCollection = self.collectionViewDataSource.allPhotos
         
-        DispatchQueue.main.sync {
+        //PHChange에 main이 아닌 다른 스레드가 할당돼서 main.sync도 가능했었으나 main.async로 바꾸기로 함
+        DispatchQueue.main.async {
             guard let changes = changeInstance.changeDetails(for: assetCollection!) else { return }
             assetCollection = changes.fetchResultAfterChanges
             
