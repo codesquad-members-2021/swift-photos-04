@@ -8,7 +8,6 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-    var doodles: [Doodle] = [Doodle]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
