@@ -62,9 +62,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key></key>
-	<string></string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Wanna use photos?</string>
+	<string>사진 접근 허락하시겠습니까</string>
 </dict>
 </plist>

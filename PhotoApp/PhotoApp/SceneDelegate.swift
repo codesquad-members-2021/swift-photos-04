@@ -1,8 +1,8 @@
 //
-//  SceneDelegate.swift
+//  DoodleViewController.swift
 //  PhotoApp
 //
-//  Created by 조중윤 on 2021/03/22.
+//  Created by kiyoungj on 2021/03/24.
 //
 
 import UIKit
