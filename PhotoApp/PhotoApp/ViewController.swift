@@ -6,21 +6,24 @@
 //
 
 import UIKit
-struct Doodle: Codable {
-    var title: String
-    var image: String
-    var date: String
-    
-}
+
 class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let urlPath = Bundle.main.url(forResource: "doodle", withExtension: "json")
-        print(urlPath!)
-        let data = try! Data(contentsOf: urlPath!)
-        let arr = try! JSONDecoder().decode([Doodle].self, from: data)
-        print(arr)
+        parseDoodle()
+    }
+    
+    func parseDoodle() {
+        guard let urlPath = Bundle.main.url(forResource: "doodle", withExtension: "json") else { return }
+        do{
+            let data = try Data(contentsOf: urlPath)
+            let decodedData = try JSONDecoder().decode([Doodle].self, from: data)
+            print(decodedData)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 }
+

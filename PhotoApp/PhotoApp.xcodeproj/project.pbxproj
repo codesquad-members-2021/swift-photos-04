@@ -20,6 +20,7 @@
 		88519EBA26097FC600DFF3AE /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88519EB926097FC600DFF3AE /* CollectionViewDataSource.swift */; };
 		88519EBF2609827400DFF3AE /* PhotosCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88519EBE2609827400DFF3AE /* PhotosCollectionView.swift */; };
 		88519EDB260B0EBE00DFF3AE /* doodle.json in Resources */ = {isa = PBXBuildFile; fileRef = 88519EDA260B0EBE00DFF3AE /* doodle.json */; };
+		88519EE0260B0F2300DFF3AE /* DoodleDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88519EDF260B0F2300DFF3AE /* DoodleDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		88519EB926097FC600DFF3AE /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
 		88519EBE2609827400DFF3AE /* PhotosCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionView.swift; sourceTree = "<group>"; };
 		88519EDA260B0EBE00DFF3AE /* doodle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = doodle.json; path = ../../../../../doodle.json; sourceTree = "<group>"; };
+		88519EDF260B0F2300DFF3AE /* DoodleDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodleDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				88519E7E2608678200DFF3AE /* SceneDelegate.swift */,
 				88519EB22608F0EF00DFF3AE /* PhotoCell.swift */,
 				88519EB32608F0EF00DFF3AE /* PhotoCell.xib */,
+				88519EDF260B0F2300DFF3AE /* DoodleDataModel.swift */,
 				88519EB926097FC600DFF3AE /* CollectionViewDataSource.swift */,
 				88519EBE2609827400DFF3AE /* PhotosCollectionView.swift */,
 				88519E802608678200DFF3AE /* ViewController.swift */,
@@ -277,6 +280,7 @@
 			files = (
 				88519EBA26097FC600DFF3AE /* CollectionViewDataSource.swift in Sources */,
 				88519EB42608F0EF00DFF3AE /* PhotoCell.swift in Sources */,
+				88519EE0260B0F2300DFF3AE /* DoodleDataModel.swift in Sources */,
 				88519E812608678200DFF3AE /* ViewController.swift in Sources */,
 				88519EBF2609827400DFF3AE /* PhotosCollectionView.swift in Sources */,
 				88519E7D2608678200DFF3AE /* AppDelegate.swift in Sources */,
