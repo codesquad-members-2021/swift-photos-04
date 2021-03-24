@@ -11,19 +11,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        parseDoodle()
-    }
-    
-    func parseDoodle() {
-        guard let urlPath = Bundle.main.url(forResource: "doodle", withExtension: "json") else { return }
-        do{
-            let data = try Data(contentsOf: urlPath)
-            let decodedData = try JSONDecoder().decode([Doodle].self, from: data)
-            print(decodedData)
-        } catch {
-            print(error.localizedDescription)
-        }
     }
 }
 
