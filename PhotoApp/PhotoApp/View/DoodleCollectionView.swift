@@ -31,8 +31,6 @@ class DoodleCollectionView: UICollectionView {
     }
     
     @objc func handleLongPress(sender: UILongPressGestureRecognizer){
-
-        
         if sender.state == UIGestureRecognizer.State.began {
             let touchPoint = sender.location(in: self)
             print(touchPoint)

@@ -34,23 +34,15 @@ extension DoodleViewDataSource: UICollectionViewDataSource {
         
         let item = doodles[indexPath.row]
         let imageURL = item.image
-        let url = URL(string: imageURL)!
-        let data = try! Data(contentsOf: url)
-        
-        DispatchQueue.main.async {
-            cell.imageView.image = UIImage(data: data)
+        guard let url = URL(string: imageURL) else { return UICollectionViewCell()}
+        do {
+            let data = try Data(contentsOf: url)
+            DispatchQueue.main.async {
+                cell.imageView.image = UIImage(data: data)
+            }
+        } catch {
+            print(error.localizedDescription)
         }
-        
-//        let asset = allPhotos.object(at: indexPath.item)
-//        let imageManager = PHCachingImageManager()
-//        imageManager.requestImage(for: asset,
-//                                  targetSize: CGSize(width: 100, height: 100),
-//                                  contentMode: .aspectFill,
-//                                  options: nil,
-//                                  resultHandler: { image, _ in
-//                                        cell.imageView.image = image
-//                                    })
-//        cell.imageView.backgroundColor = .red
         return cell
     }
 }

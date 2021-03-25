@@ -6,23 +6,21 @@
 //
 
 import UIKit
-import Photos
 
 class CollectionViewDataSource: NSObject {
-    var allPhotos: PHFetchResult<PHAsset>!
+    
 }
 
 extension CollectionViewDataSource: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        allPhotos = PHAsset.fetchAssets(with: nil)
-        return allPhotos.count
+        return PhotoDataManager.shared.allPhotos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
-        let asset = allPhotos.object(at: indexPath.item)
-        let imageManager = PHCachingImageManager()
-        imageManager.requestImage(for: asset,
+        let asset = PhotoDataManager.shared.allPhotos.object(at: indexPath.item)
+        
+        PhotoDataManager.shared.imageManager.requestImage(for: asset,
                                   targetSize: CGSize(width: 100, height: 100),
                                   contentMode: .aspectFill,
                                   options: nil,

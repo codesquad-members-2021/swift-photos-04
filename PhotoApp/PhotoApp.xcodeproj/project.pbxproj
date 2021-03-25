@@ -24,6 +24,7 @@
 		88519EE5260B122900DFF3AE /* DoodleCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88519EE4260B122900DFF3AE /* DoodleCollectionView.swift */; };
 		88519EEA260B17C700DFF3AE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88519EE9260B17C700DFF3AE /* SecondViewController.swift */; };
 		88519EFF260B258800DFF3AE /* DoodleViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88519EFE260B258800DFF3AE /* DoodleViewDataSource.swift */; };
+		88519F04260C2CD400DFF3AE /* PhotoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88519F03260C2CD400DFF3AE /* PhotoDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		88519EE4260B122900DFF3AE /* DoodleCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodleCollectionView.swift; sourceTree = "<group>"; };
 		88519EE9260B17C700DFF3AE /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		88519EFE260B258800DFF3AE /* DoodleViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodleViewDataSource.swift; sourceTree = "<group>"; };
+		88519F03260C2CD400DFF3AE /* PhotoDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 		88519EF5260B186F00DFF3AE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				88519F03260C2CD400DFF3AE /* PhotoDataManager.swift */,
 				88519EDF260B0F2300DFF3AE /* DoodleDataModel.swift */,
 				88519EB926097FC600DFF3AE /* CollectionViewDataSource.swift */,
 				88519EFE260B258800DFF3AE /* DoodleViewDataSource.swift */,
@@ -326,6 +329,7 @@
 				88519EE5260B122900DFF3AE /* DoodleCollectionView.swift in Sources */,
 				88519E812608678200DFF3AE /* ViewController.swift in Sources */,
 				88519EFF260B258800DFF3AE /* DoodleViewDataSource.swift in Sources */,
+				88519F04260C2CD400DFF3AE /* PhotoDataManager.swift in Sources */,
 				88519EBF2609827400DFF3AE /* PhotosCollectionView.swift in Sources */,
 				88519E7D2608678200DFF3AE /* AppDelegate.swift in Sources */,
 				88519E7F2608678200DFF3AE /* SceneDelegate.swift in Sources */,
