@@ -19,6 +19,13 @@
 		88519EB52608F0EF00DFF3AE /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88519EB32608F0EF00DFF3AE /* PhotoCell.xib */; };
 		88519EBA26097FC600DFF3AE /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88519EB926097FC600DFF3AE /* CollectionViewDataSource.swift */; };
 		88519EBF2609827400DFF3AE /* PhotosCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88519EBE2609827400DFF3AE /* PhotosCollectionView.swift */; };
+		88519EDB260B0EBE00DFF3AE /* doodle.json in Resources */ = {isa = PBXBuildFile; fileRef = 88519EDA260B0EBE00DFF3AE /* doodle.json */; };
+		88519EE0260B0F2300DFF3AE /* DoodleDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88519EDF260B0F2300DFF3AE /* DoodleDataModel.swift */; };
+		88519EE5260B122900DFF3AE /* DoodleCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88519EE4260B122900DFF3AE /* DoodleCollectionView.swift */; };
+		88519EEA260B17C700DFF3AE /* DoodleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88519EE9260B17C700DFF3AE /* DoodleViewController.swift */; };
+		88519EFF260B258800DFF3AE /* DoodleViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88519EFE260B258800DFF3AE /* DoodleViewDataSource.swift */; };
+		88519F04260C2CD400DFF3AE /* PhotoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88519F03260C2CD400DFF3AE /* PhotoDataManager.swift */; };
+		88519F10260C89D300DFF3AE /* DoodleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88519F0F260C89D300DFF3AE /* DoodleManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +64,13 @@
 		88519EB32608F0EF00DFF3AE /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
 		88519EB926097FC600DFF3AE /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
 		88519EBE2609827400DFF3AE /* PhotosCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionView.swift; sourceTree = "<group>"; };
+		88519EDA260B0EBE00DFF3AE /* doodle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = doodle.json; path = ../../../../../doodle.json; sourceTree = "<group>"; };
+		88519EDF260B0F2300DFF3AE /* DoodleDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodleDataModel.swift; sourceTree = "<group>"; };
+		88519EE4260B122900DFF3AE /* DoodleCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodleCollectionView.swift; sourceTree = "<group>"; };
+		88519EE9260B17C700DFF3AE /* DoodleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodleViewController.swift; sourceTree = "<group>"; };
+		88519EFE260B258800DFF3AE /* DoodleViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodleViewDataSource.swift; sourceTree = "<group>"; };
+		88519F03260C2CD400DFF3AE /* PhotoDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDataManager.swift; sourceTree = "<group>"; };
+		88519F0F260C89D300DFF3AE /* DoodleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodleManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,13 +123,12 @@
 			children = (
 				88519E7C2608678200DFF3AE /* AppDelegate.swift */,
 				88519E7E2608678200DFF3AE /* SceneDelegate.swift */,
-				88519EB22608F0EF00DFF3AE /* PhotoCell.swift */,
-				88519EB32608F0EF00DFF3AE /* PhotoCell.xib */,
-				88519EB926097FC600DFF3AE /* CollectionViewDataSource.swift */,
-				88519EBE2609827400DFF3AE /* PhotosCollectionView.swift */,
-				88519E802608678200DFF3AE /* ViewController.swift */,
+				88519EF5260B186F00DFF3AE /* Model */,
+				88519EF6260B188B00DFF3AE /* View */,
+				88519EFA260B189200DFF3AE /* Controller */,
 				88519E822608678200DFF3AE /* Main.storyboard */,
 				88519E852608678500DFF3AE /* Assets.xcassets */,
+				88519EDA260B0EBE00DFF3AE /* doodle.json */,
 				88519E872608678500DFF3AE /* LaunchScreen.storyboard */,
 				88519E8A2608678500DFF3AE /* Info.plist */,
 			);
@@ -138,6 +151,46 @@
 				88519EA02608678500DFF3AE /* Info.plist */,
 			);
 			path = PhotoAppUITests;
+			sourceTree = "<group>";
+		};
+		88519EF5260B186F00DFF3AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				88519F03260C2CD400DFF3AE /* PhotoDataManager.swift */,
+				88519EDF260B0F2300DFF3AE /* DoodleDataModel.swift */,
+				88519F0F260C89D300DFF3AE /* DoodleManager.swift */,
+				88519EB926097FC600DFF3AE /* CollectionViewDataSource.swift */,
+				88519EFE260B258800DFF3AE /* DoodleViewDataSource.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		88519EF6260B188B00DFF3AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88519F0E260C897500DFF3AE /* Cell */,
+				88519EBE2609827400DFF3AE /* PhotosCollectionView.swift */,
+				88519EE4260B122900DFF3AE /* DoodleCollectionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88519EFA260B189200DFF3AE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				88519E802608678200DFF3AE /* ViewController.swift */,
+				88519EE9260B17C700DFF3AE /* DoodleViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		88519F0E260C897500DFF3AE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				88519EB22608F0EF00DFF3AE /* PhotoCell.swift */,
+				88519EB32608F0EF00DFF3AE /* PhotoCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +300,7 @@
 				88519E892608678500DFF3AE /* LaunchScreen.storyboard in Resources */,
 				88519E862608678500DFF3AE /* Assets.xcassets in Resources */,
 				88519E842608678200DFF3AE /* Main.storyboard in Resources */,
+				88519EDB260B0EBE00DFF3AE /* doodle.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +327,13 @@
 			files = (
 				88519EBA26097FC600DFF3AE /* CollectionViewDataSource.swift in Sources */,
 				88519EB42608F0EF00DFF3AE /* PhotoCell.swift in Sources */,
+				88519EE0260B0F2300DFF3AE /* DoodleDataModel.swift in Sources */,
+				88519EEA260B17C700DFF3AE /* DoodleViewController.swift in Sources */,
+				88519EE5260B122900DFF3AE /* DoodleCollectionView.swift in Sources */,
 				88519E812608678200DFF3AE /* ViewController.swift in Sources */,
+				88519EFF260B258800DFF3AE /* DoodleViewDataSource.swift in Sources */,
+				88519F04260C2CD400DFF3AE /* PhotoDataManager.swift in Sources */,
+				88519F10260C89D300DFF3AE /* DoodleManager.swift in Sources */,
 				88519EBF2609827400DFF3AE /* PhotosCollectionView.swift in Sources */,
 				88519E7D2608678200DFF3AE /* AppDelegate.swift in Sources */,
 				88519E7F2608678200DFF3AE /* SceneDelegate.swift in Sources */,

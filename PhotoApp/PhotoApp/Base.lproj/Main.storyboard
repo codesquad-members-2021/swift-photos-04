@@ -48,11 +48,61 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mbo-UH-Sbe" secondAttribute="trailing" id="zZQ-Pm-Zsk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Photos" id="qfd-PX-D1Q"/>
+                    <navigationItem key="navigationItem" title="Photos" id="qfd-PX-D1Q">
+                        <barButtonItem key="leftBarButtonItem" image="plus" catalog="system" id="NTL-jL-i4B">
+                            <connections>
+                                <segue destination="oK5-dC-76R" kind="show" id="YfO-iM-kMp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1003.0769230769231" y="74.644549763033169"/>
+        </scene>
+        <!--Doodle-->
+        <scene sceneID="sVI-wn-QpI">
+            <objects>
+                <viewController storyboardIdentifier="DoodleViewController" id="oK5-dC-76R" customClass="DoodleViewController" customModule="PhotoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aws-ex-ZJ5">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aCH-ux-Ks5" customClass="DoodleCollectionView" customModule="PhotoApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="390" height="722"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HMI-0H-cJG">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2kk-Wb-EMF">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0Fq-Ou-pG7">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qoS-bm-CdJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qoS-bm-CdJ" firstAttribute="trailing" secondItem="aCH-ux-Ks5" secondAttribute="trailing" id="0nV-a1-xPJ"/>
+                            <constraint firstItem="qoS-bm-CdJ" firstAttribute="bottom" secondItem="aCH-ux-Ks5" secondAttribute="bottom" id="8fE-9D-cOx"/>
+                            <constraint firstItem="aCH-ux-Ks5" firstAttribute="top" secondItem="qoS-bm-CdJ" secondAttribute="top" id="iJD-64-eBi"/>
+                            <constraint firstItem="aCH-ux-Ks5" firstAttribute="leading" secondItem="qoS-bm-CdJ" secondAttribute="leading" id="yUv-P1-rrq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Doodle" id="SnQ-gY-JZc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Xk-t2-iWx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1852" y="75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3sq-ox-tux">
@@ -74,6 +124,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
