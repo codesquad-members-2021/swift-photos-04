@@ -22,7 +22,7 @@
 		88519EDB260B0EBE00DFF3AE /* doodle.json in Resources */ = {isa = PBXBuildFile; fileRef = 88519EDA260B0EBE00DFF3AE /* doodle.json */; };
 		88519EE0260B0F2300DFF3AE /* DoodleDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88519EDF260B0F2300DFF3AE /* DoodleDataModel.swift */; };
 		88519EE5260B122900DFF3AE /* DoodleCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88519EE4260B122900DFF3AE /* DoodleCollectionView.swift */; };
-		88519EEA260B17C700DFF3AE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88519EE9260B17C700DFF3AE /* SecondViewController.swift */; };
+		88519EEA260B17C700DFF3AE /* DoodleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88519EE9260B17C700DFF3AE /* DoodleViewController.swift */; };
 		88519EFF260B258800DFF3AE /* DoodleViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88519EFE260B258800DFF3AE /* DoodleViewDataSource.swift */; };
 		88519F04260C2CD400DFF3AE /* PhotoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88519F03260C2CD400DFF3AE /* PhotoDataManager.swift */; };
 /* End PBXBuildFile section */
@@ -66,7 +66,7 @@
 		88519EDA260B0EBE00DFF3AE /* doodle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = doodle.json; path = ../../../../../doodle.json; sourceTree = "<group>"; };
 		88519EDF260B0F2300DFF3AE /* DoodleDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodleDataModel.swift; sourceTree = "<group>"; };
 		88519EE4260B122900DFF3AE /* DoodleCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodleCollectionView.swift; sourceTree = "<group>"; };
-		88519EE9260B17C700DFF3AE /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		88519EE9260B17C700DFF3AE /* DoodleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodleViewController.swift; sourceTree = "<group>"; };
 		88519EFE260B258800DFF3AE /* DoodleViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodleViewDataSource.swift; sourceTree = "<group>"; };
 		88519F03260C2CD400DFF3AE /* PhotoDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -185,7 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				88519E802608678200DFF3AE /* ViewController.swift */,
-				88519EE9260B17C700DFF3AE /* SecondViewController.swift */,
+				88519EE9260B17C700DFF3AE /* DoodleViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -325,7 +325,7 @@
 				88519EBA26097FC600DFF3AE /* CollectionViewDataSource.swift in Sources */,
 				88519EB42608F0EF00DFF3AE /* PhotoCell.swift in Sources */,
 				88519EE0260B0F2300DFF3AE /* DoodleDataModel.swift in Sources */,
-				88519EEA260B17C700DFF3AE /* SecondViewController.swift in Sources */,
+				88519EEA260B17C700DFF3AE /* DoodleViewController.swift in Sources */,
 				88519EE5260B122900DFF3AE /* DoodleCollectionView.swift in Sources */,
 				88519E812608678200DFF3AE /* ViewController.swift in Sources */,
 				88519EFF260B258800DFF3AE /* DoodleViewDataSource.swift in Sources */,

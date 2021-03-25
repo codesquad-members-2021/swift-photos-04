@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oK5-dC-76R">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="46O-Rb-nej">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -49,17 +49,21 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Photos" id="qfd-PX-D1Q">
-                        <barButtonItem key="leftBarButtonItem" image="plus" catalog="system" id="NTL-jL-i4B"/>
+                        <barButtonItem key="leftBarButtonItem" image="plus" catalog="system" id="NTL-jL-i4B">
+                            <connections>
+                                <action selector="plusButtonPressed:" destination="BYZ-38-t0r" id="n4w-Pf-F87"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1003.0769230769231" y="74.644549763033169"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Doodle View Controller-->
         <scene sceneID="sVI-wn-QpI">
             <objects>
-                <viewController id="oK5-dC-76R" customClass="SecondViewController" customModule="PhotoApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DoodleViewController" id="oK5-dC-76R" customClass="DoodleViewController" customModule="PhotoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Aws-ex-ZJ5">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
