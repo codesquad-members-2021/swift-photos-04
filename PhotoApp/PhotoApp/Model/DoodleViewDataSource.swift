@@ -34,13 +34,16 @@ extension DoodleViewDataSource: UICollectionViewDataSource {
         let item = self.doodles[indexPath.row]
         let imageURL = item.image
         if let url = URL(string: imageURL) {
-            do {
-                let data = try Data(contentsOf: url)
-                DispatchQueue.main.async {
-                    cell.imageView.image = UIImage(data: data)
+            //helped to load second collectionView without delay
+            DispatchQueue.global().async {
+                do {
+                    let data = try Data(contentsOf: url)
+                    DispatchQueue.main.async {
+                        cell.imageView.image = UIImage(data: data)
+                    }
+                } catch {
+                    print(error.localizedDescription)
                 }
-            } catch {
-                print(error.localizedDescription)
             }
         }
         return cell
