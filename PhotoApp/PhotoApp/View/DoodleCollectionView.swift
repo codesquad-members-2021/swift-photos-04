@@ -33,20 +33,20 @@ class DoodleCollectionView: UICollectionView {
     @objc func handleLongPress(sender: UILongPressGestureRecognizer){
         if sender.state == UIGestureRecognizer.State.began {
             let touchPoint = sender.location(in: self)
-            print(touchPoint)
             guard let indexPath = self.indexPathForItem(at: touchPoint) else { return }
             guard let cell = self.cellForItem(at: indexPath) as? PhotoCell else { return }
-            print(cell)
-            print(cell.imageView.image)
-            cell.becomeFirstResponder()
             
-            enableCustomMenu(targetView: cell)
+            if let safeImage = cell.imageView.image {
+                PhotoDataManager.setImageForSaving(with: safeImage)
+                cell.becomeFirstResponder()
+                enableCustomMenu(targetView: cell)
+            }
         }
     }
     
     func enableCustomMenu(targetView: UICollectionViewCell) {
         let saveItem = UIMenuItem(title: "Save", action: #selector(savePhoto))
-        let dummyItem = UIMenuItem(title: "Dummy", action: #selector(dummyFunction))
+        let dummyItem = UIMenuItem(title: "Quit", action: #selector(doNotSave))
         UIMenuController.shared.menuItems = [saveItem, dummyItem]
         // rect is not valid here
         UIMenuController.shared.showMenu(from: targetView, rect: CGRect())
@@ -58,12 +58,9 @@ class DoodleCollectionView: UICollectionView {
     }
     
     @objc func savePhoto() {
-        print("Hello")
-//        UIImageWriteToSavedPhotosAlbum(inputImage, nil, nil, nil)
+        PhotoDataManager.saveImageForSaving()
     }
-    @objc func dummyFunction() {
-        print("Hello")
-//        UIImageWriteToSavedPhotosAlbum(inputImage, nil, nil, nil)
+    @objc func doNotSave() {
+        // do not save the photo when 'Quit' is pressed
     }
-    
 }

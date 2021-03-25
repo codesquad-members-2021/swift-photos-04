@@ -17,7 +17,6 @@ class DoodleViewDataSource: NSObject {
             let data = try Data(contentsOf: urlPath)
             let decodedData = try JSONDecoder().decode([Doodle].self, from: data)
             doodles = decodedData
-//            print(decodedData)
         } catch {
             print(error.localizedDescription)
         }
