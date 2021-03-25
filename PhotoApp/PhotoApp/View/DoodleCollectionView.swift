@@ -14,7 +14,7 @@ class DoodleCollectionView: UICollectionView {
         super.init(frame: frame, collectionViewLayout: layout)
         self.dataSource = doodleViewDataSource
         self.delegate = doodleViewDataSource
-        doodleViewDataSource.parseDoodle()
+//        doodleViewDataSource.parseDoodle()
         self.register(UINib(nibName: "PhotoCell", bundle: nil), forCellWithReuseIdentifier: "PhotoCell")
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress))
         self.addGestureRecognizer(longPress)
@@ -25,7 +25,7 @@ class DoodleCollectionView: UICollectionView {
         super.init(coder: coder)
         self.dataSource = doodleViewDataSource
         self.delegate = doodleViewDataSource
-        doodleViewDataSource.parseDoodle()
+//        doodleViewDataSource.parseDoodle()
         self.register(UINib(nibName: "PhotoCell", bundle: nil), forCellWithReuseIdentifier: "PhotoCell")
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress))
         self.addGestureRecognizer(longPress)

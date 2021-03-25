@@ -9,29 +9,18 @@ import UIKit
 import Photos
 
 class DoodleViewDataSource: NSObject {
-    var doodles: [Doodle] = []
-    
-    func parseDoodle() {
-        guard let urlPath = Bundle.main.url(forResource: "doodle", withExtension: "json") else { return }
-        do{
-            let data = try Data(contentsOf: urlPath)
-            let decodedData = try JSONDecoder().decode([Doodle].self, from: data)
-            doodles = decodedData
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
+     var doodleManager = DoodleManager()
 }
                             
 extension DoodleViewDataSource: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return doodles.count
+        return doodleManager.doodle.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
         
-        let item = self.doodles[indexPath.row]
+        let item = self.doodleManager.doodle[indexPath.row]
         let imageURL = item.image
         if let url = URL(string: imageURL) {
             //helped to load second collectionView without delay
