@@ -25,6 +25,7 @@ class PhotosCollectionView: UICollectionView {
         self.delegate = collectionViewDataSource
         self.register(UINib(nibName: "PhotoCell", bundle: nil), forCellWithReuseIdentifier: "PhotoCell")
         PHPhotoLibrary.shared().register(self)
+        self.backgroundColor = .red
     }
 }
 

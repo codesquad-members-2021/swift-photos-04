@@ -31,16 +31,17 @@ extension DoodleViewDataSource: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
         
-        let item = doodles[indexPath.row]
+        let item = self.doodles[indexPath.row]
         let imageURL = item.image
-        guard let url = URL(string: imageURL) else { return UICollectionViewCell()}
-        do {
-            let data = try Data(contentsOf: url)
-            DispatchQueue.main.async {
-                cell.imageView.image = UIImage(data: data)
+        if let url = URL(string: imageURL) {
+            do {
+                let data = try Data(contentsOf: url)
+                DispatchQueue.main.async {
+                    cell.imageView.image = UIImage(data: data)
+                }
+            } catch {
+                print(error.localizedDescription)
             }
-        } catch {
-            print(error.localizedDescription)
         }
         return cell
     }
