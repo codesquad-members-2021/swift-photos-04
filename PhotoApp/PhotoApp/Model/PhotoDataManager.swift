@@ -26,5 +26,4 @@ class PhotoDataManager {
     static public func saveImageForSaving() {
         UIImageWriteToSavedPhotosAlbum(imageForSaving!, nil, nil, nil)
     }
-    
 }

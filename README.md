@@ -11,7 +11,7 @@
 #### Study keywords
 - UICollectionView
 
-### 1. (Collection View Layout) 콜렉션 뷰 생성 및 셀 배치 2021.03.23 19:00
+### 2. (Collection View Layout) 콜렉션 뷰 생성 및 셀 배치 2021.03.23 19:00
 - [x] UINavigationController 넣기
 - [x] CollectionView Cell 크기를 100 x 100으로 지정
 - [x] CollectionView Cell에 이미지뷰 추가
@@ -71,3 +71,22 @@ extension PhotosCollectionView: PHPhotoLibraryChangeObserver {
 #### Study keywords
 - UICollectionView
 - Photos Frameworks
+
+### 3. (GCD_Scheduling) 콜렉션 2021.03.25 17:00
+- [x] Bundle에서 doodle.json 파일을 읽어와서 스위프트 데이터 구조로 변환
+- [x] GCD 큐를 활용해서 동시에 최대한 효율적으로 여러 이미지를 다운로드 받아서 컬렉션 뷰에 표시
+- [x] Navigation Bar Item 숨김 및 표시
+- [x] 컬렉션 뷰의 셀을 길게 클릭하면 UIMenuItem이 표시되도록 구현
+- [x] UIMenuItem의 Save 버튼을 클릭하면 해당 이미지가 포토라이브러리에 저장되도록 구현
+
+#### Display
+<img src="doodleCollectionView.gif" width="600">
+
+#### Study keywords
+- Bundle
+- Grand Central Dispatch
+- Thread
+- Navigation Bar
+- JSON
+- UILongPressGestureRecognizer
+- UIMenuItem

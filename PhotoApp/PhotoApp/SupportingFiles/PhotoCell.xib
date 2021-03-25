@@ -29,7 +29,7 @@
                 <constraint firstAttribute="bottom" secondItem="A4e-YX-cFz" secondAttribute="bottom" id="sdC-VR-Rej"/>
             </constraints>
             <connections>
-                <outlet property="imageView" destination="A4e-YX-cFz" id="LYt-er-vpj"/>
+                <outlet property="imageView" destination="A4e-YX-cFz" id="SjP-lQ-xae"/>
             </connections>
             <point key="canvasLocation" x="-275.36231884057975" y="93.75"/>
         </collectionViewCell>
