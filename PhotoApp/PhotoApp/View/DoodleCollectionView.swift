@@ -18,6 +18,7 @@ class DoodleCollectionView: UICollectionView {
         self.register(UINib(nibName: "PhotoCell", bundle: nil), forCellWithReuseIdentifier: "PhotoCell")
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress))
         self.addGestureRecognizer(longPress)
+        self.backgroundColor = .darkGray
     }
     
     required init?(coder: NSCoder) {
@@ -28,6 +29,7 @@ class DoodleCollectionView: UICollectionView {
         self.register(UINib(nibName: "PhotoCell", bundle: nil), forCellWithReuseIdentifier: "PhotoCell")
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress))
         self.addGestureRecognizer(longPress)
+        self.backgroundColor = .darkGray
     }
     
     @objc func handleLongPress(sender: UILongPressGestureRecognizer){

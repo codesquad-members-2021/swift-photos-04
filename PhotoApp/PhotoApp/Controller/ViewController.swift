@@ -12,10 +12,5 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    @IBAction func plusButtonPressed(_ sender: UIBarButtonItem) {
-        let destinationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DoodleViewController") as! DoodleViewController
-        self.present(destinationVC, animated: true, completion: nil)
-    }
 }
 
