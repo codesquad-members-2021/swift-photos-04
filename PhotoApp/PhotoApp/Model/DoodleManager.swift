@@ -8,7 +8,7 @@
 import Foundation
 
 class DoodleManager {
-    var doodle: [Doodle]!
+    public var doodle: [Doodle]!
     
     init() {
         self.doodle = parseDoodle()

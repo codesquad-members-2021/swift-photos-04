@@ -9,7 +9,7 @@ import UIKit
 import Photos
 
 class PhotosCollectionView: UICollectionView {
-    let collectionViewDataSource = CollectionViewDataSource()
+    private let collectionViewDataSource = CollectionViewDataSource()
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)

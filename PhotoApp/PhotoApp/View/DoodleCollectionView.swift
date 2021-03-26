@@ -8,7 +8,7 @@
 import UIKit
 
 class DoodleCollectionView: UICollectionView {
-    let doodleViewDataSource = DoodleViewDataSource()
+    private let doodleViewDataSource = DoodleViewDataSource()
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)

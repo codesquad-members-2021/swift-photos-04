@@ -9,7 +9,7 @@ import UIKit
 import Photos
 
 class DoodleViewDataSource: NSObject {
-     var doodleManager = DoodleManager()
+     private var doodleManager = DoodleManager()
 }
                             
 extension DoodleViewDataSource: UICollectionViewDataSource {
