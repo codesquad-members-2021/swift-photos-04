@@ -9,7 +9,19 @@ import UIKit
 import Photos
 
 class DoodleViewDataSource: NSObject {
-     private var doodleManager = DoodleManager()
+    private var doodleManager = DoodleManager()
+    
+    private func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
+    }
+    
+    private func downloadImage(from url: URL, handler: @escaping (UIImage) -> Void) {
+        getData(from: url) { data, response, error in
+            guard let data = data, error == nil else { return }
+            guard let downloadedImage = UIImage(data: data) else { return }
+            handler(downloadedImage)
+        }
+    }
 }
                             
 extension DoodleViewDataSource: UICollectionViewDataSource {
@@ -25,13 +37,10 @@ extension DoodleViewDataSource: UICollectionViewDataSource {
         if let url = URL(string: imageURL) {
             //helped to load second collectionView without delay
             DispatchQueue.global().async {
-                do {
-                    let data = try Data(contentsOf: url)
+                self.downloadImage(from: url) { (uiimage) in
                     DispatchQueue.main.async {
-                        cell.imageView.image = UIImage(data: data)
+                        cell.imageView.image = uiimage
                     }
-                } catch {
-                    print(error.localizedDescription)
                 }
             }
         }
