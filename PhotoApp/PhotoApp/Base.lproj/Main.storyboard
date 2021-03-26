@@ -43,6 +43,7 @@
                                 <segue destination="oK5-dC-76R" kind="show" id="YfO-iM-kMp"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="LUP-de-7Uz"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
