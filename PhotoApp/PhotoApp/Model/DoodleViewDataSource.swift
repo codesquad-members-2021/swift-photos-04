@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Photos
 
 class DoodleViewDataSource: NSObject {
     private var doodleManager = DoodleManager()
