@@ -19,11 +19,18 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A4e-YX-cFz">
                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                     </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="livephoto" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lXK-jz-HR8">
+                        <rect key="frame" x="35" y="0.0" width="15" height="15.5"/>
+                    </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
+                <constraint firstItem="lXK-jz-HR8" firstAttribute="trailing" secondItem="A4e-YX-cFz" secondAttribute="trailing" id="JTo-Sf-J7b"/>
+                <constraint firstItem="lXK-jz-HR8" firstAttribute="height" secondItem="A4e-YX-cFz" secondAttribute="height" multiplier="0.3" id="R1w-97-oxc"/>
                 <constraint firstItem="A4e-YX-cFz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="a3R-yH-49g"/>
+                <constraint firstItem="lXK-jz-HR8" firstAttribute="top" secondItem="A4e-YX-cFz" secondAttribute="top" id="iES-ku-vO1"/>
+                <constraint firstItem="lXK-jz-HR8" firstAttribute="width" secondItem="A4e-YX-cFz" secondAttribute="width" multiplier="0.3" id="m20-gf-uym"/>
                 <constraint firstAttribute="trailing" secondItem="A4e-YX-cFz" secondAttribute="trailing" id="otz-4l-v1E"/>
                 <constraint firstItem="A4e-YX-cFz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pLe-qD-Jom"/>
                 <constraint firstAttribute="bottom" secondItem="A4e-YX-cFz" secondAttribute="bottom" id="sdC-VR-Rej"/>
@@ -34,4 +41,7 @@
             <point key="canvasLocation" x="-275.36231884057975" y="93.75"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="livephoto" catalog="system" width="128" height="122"/>
+    </resources>
 </document>
