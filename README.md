@@ -80,7 +80,7 @@ extension PhotosCollectionView: PHPhotoLibraryChangeObserver {
 - [x] UIMenuItem의 Save 버튼을 클릭하면 해당 이미지가 포토라이브러리에 저장되도록 구현
 
 #### Display
-<img src="images/doodleCollectionView.gif" width="600">
+<img src="images/doodleCollectionView.gif" width="400">
 
 #### Study keywords
 - Bundle
