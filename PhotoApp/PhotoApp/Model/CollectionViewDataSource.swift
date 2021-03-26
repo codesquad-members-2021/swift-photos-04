@@ -27,6 +27,11 @@ extension CollectionViewDataSource: UICollectionViewDataSource {
                                   resultHandler: { image, _ in
                                         cell.imageView.image = image
                                     })
+        
+        if asset.mediaSubtypes != .photoLive {
+            cell.livephotoImageView.isHidden = true
+        }
+        
         return cell
     }
 }

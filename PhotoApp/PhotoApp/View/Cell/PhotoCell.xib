@@ -37,6 +37,7 @@
             </constraints>
             <connections>
                 <outlet property="imageView" destination="A4e-YX-cFz" id="SjP-lQ-xae"/>
+                <outlet property="livephotoImageView" destination="lXK-jz-HR8" id="Jvj-pt-tD6"/>
             </connections>
             <point key="canvasLocation" x="-275.36231884057975" y="93.75"/>
         </collectionViewCell>

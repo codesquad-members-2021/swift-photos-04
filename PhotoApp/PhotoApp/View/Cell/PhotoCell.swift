@@ -9,6 +9,7 @@ import UIKit
 
 class PhotoCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var livephotoImageView: UIImageView!
     
     override var canBecomeFirstResponder: Bool {
         return true
