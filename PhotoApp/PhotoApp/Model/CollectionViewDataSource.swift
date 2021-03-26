@@ -8,7 +8,6 @@
 import UIKit
 
 class CollectionViewDataSource: NSObject {
-    
 }
 
 extension CollectionViewDataSource: UICollectionViewDataSource {
